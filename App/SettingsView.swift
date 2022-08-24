@@ -15,13 +15,20 @@ struct SettingsView: View {
                 VStack(spacing: 20) {
                     // MARK: - SECTION 1
                     GroupBox(label:
-                    HStack {
-                        Text("Fructus".uppercased()).fontWeight(.bold)
-                        Spacer()
-                        Image(systemName: "info.circle")
-                    }
+                    SettingsLabelView(labelText: "Fructus", labelImage: "info.circle")
                     ){
-                        Text("Hello Word")
+                        Divider().padding(.vertical, 4)
+                        HStack(alignment: .center, spacing: 10) {
+                            
+                            Image("logo")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 80, height: 80)
+                                .cornerRadius(9)
+                            
+                            Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.")
+                                .font(.footnote)
+                        }
                     }
                     
                     // MARK: - SECTION 2
